@@ -11,7 +11,7 @@ class MyHandler(BaseHTTPRequestHandler):
     self.send_response(200)
     self.send_header('Content-type','image/png')
     self.end_headers()
-    with open('logo.png', 'rb') as f:
+    with open('vmware_logo.png', 'rb') as f:
       self.wfile.write(f.read())
 
 try:
@@ -21,4 +21,4 @@ try:
 
 except KeyboardInterrupt:
   server.server_close()
-  print('Stopping server')
+  print('Stopping server ')
